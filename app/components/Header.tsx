@@ -1,7 +1,7 @@
 "use client"; // This marks the file as a client component
 
 import { useState, useEffect } from "react";
-import { Menu, Search } from "lucide-react";
+import { Menu, Search, Sun, Moon } from "lucide-react"; // Import Sun and Moon icons
 import { Input } from "./ui/Input";
 import { Button } from "./ui/Button";
 
@@ -31,8 +31,8 @@ export default function Header() {
   return (
     <header
       className={`${
-        isDarkMode ? "bg-gray-800 text-white" : "bg-base-100 text-black"
-      } shadow-md sticky top-0 z-50`}
+        isDarkMode ? "bg-gray-800 text-white" : "bg-white text-black"
+      } shadow-md sticky top-0 z-50 transition-all duration-300 ease-in-out`}
     >
       <div className="container mx-auto flex items-center justify-between p-4">
         {/* Logo */}
@@ -74,9 +74,13 @@ export default function Header() {
         {/* Theme Toggle Button */}
         <button
           onClick={toggleTheme}
-          className="btn btn-ghost md:hidden ml-4"
+          className="md:block hidden btn btn-ghost ml-4 p-2 rounded-full bg-transparent hover:bg-gray-200 transition-all duration-300"
         >
-          {isDarkMode ? "Light Mode" : "Dark Mode"}
+          {isDarkMode ? (
+            <Sun size={20} className="text-yellow-500" />
+          ) : (
+            <Moon size={20} className="text-blue-500" />
+          )}
         </button>
       </div>
 
