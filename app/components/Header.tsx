@@ -23,7 +23,7 @@ export default function Header() {
 						Tournaments
 					</a>
 					<a href="#" className="text-gray-700 hover:text-primary">
-						History
+						Latest Results
 					</a>
 				</nav>
 
