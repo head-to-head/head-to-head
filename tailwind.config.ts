@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
+import daisyui from "daisyui"; // Import DaisyUI properly
 
-export default {
+const config: Config = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -14,5 +15,7 @@ export default {
       },
     },
   },
-  plugins: [],
-} satisfies Config;
+  plugins: [daisyui], // Use the imported plugin
+};
+
+export default config;
