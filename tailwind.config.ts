@@ -2,6 +2,7 @@ import type { Config } from "tailwindcss";
 import daisyui from "daisyui"; // Import DaisyUI properly
 
 const config: Config = {
+  darkMode: "class", // Ensure dark mode works via class
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -16,6 +17,9 @@ const config: Config = {
     },
   },
   plugins: [daisyui], // Use the imported plugin
+  daisyui: {
+    themes: ["light", "dark"], // Enable both light and dark themes
+  },
 };
 
 export default config;
