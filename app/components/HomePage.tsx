@@ -1,10 +1,10 @@
 import MatchupPage from "./MatchUp";
-import Carousel from "./Carousel";
+import CarouselWithSideImages from "./CarouselWithSideImages";
 
 const HomePage = () => {
     return (
         <>
-            <Carousel />
+            <CarouselWithSideImages/>
             <MatchupPage />
         </>
     );
